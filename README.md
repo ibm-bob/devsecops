@@ -41,6 +41,4 @@ You can also start workflows directly from the Bob prompt:
 - Issues: https://github.com/IBM/ibm-bob/issues
 - Source: https://github.com/IBM/ibm-bob-devsecops
 
-## License
 
-See [`LICENSE`](LICENSE).
