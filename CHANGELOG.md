@@ -8,8 +8,8 @@ First public release of IBM Bob Premium Package for DevSecOps for [IBM Bob](http
 
 ### Highlights
 
-- **Scan all code** — Run SAST and supply chain scans across your repository using Trivy, Semgrep (Opengrep), and KICS; all issues surface in Bob Findings.
-- **Fix supply chain vulnerabilities** — Agent-driven fix loop that patches all vulnerable dependencies and verifies the build.
+- **Scan all code** — Run SAST and supply chain scans across your repository using Trivy, Opengrep, and KICS; all issues surface in Bob Findings.
+- **Fix supply chain vulnerabilities** — Agent-driven fix loop that patches vulnerable dependencies and verifies the build.
 - **Attack-surface scan** — AI-driven workflow that maps your application's attack surface and validates evidence-backed security findings across the full repository or only what changed.
 - **File-sweep scan** — Experimental per-file security triage pipeline; inspects every source file and verifies each possible issue through successive passes.
 - **Ansible automation** — Develop, review, and refactor playbooks, roles, and collections following Ansible best practices, validated by lint and idempotence checks.

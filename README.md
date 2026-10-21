@@ -23,10 +23,11 @@
 You can also start workflows directly from the Bob prompt:
 
 ```
-/light-security-scan   — attack-surface scan (recommended starting point)
-/deep-security-scan    — file-sweep scan (thorough, higher token cost)
-/ansible-automation    — Ansible skill
-/terraform-this        — Terraform skill
+/attack-surface-scan              — map attack surface and validate security findings
+/file-sweep-scan                  — per-file scan, thorough but higher token cost
+/supply-chain-fix-vulnerabilities — fix all supply chain vulnerabilities
+/ansible-automation               — Ansible skill
+/terraform-this                   — Terraform skill
 ```
 
 ## Requirements
@@ -34,27 +35,6 @@ You can also start workflows directly from the Bob prompt:
 - [IBM Bob](https://bob.ibm.com)
 - IBM Bob Premium Package for DevSecOps subscription
 
-## FAQ
-
-**Does this extension work by itself?**
-No. It extends [IBM Bob](https://bob.ibm.com) and requires it as a dependency.
-
-**What languages and package managers are supported?**
-- SAST: JavaScript, TypeScript, Python, Java, Go, Ruby, C/C++, Terraform, Kubernetes, Dockerfile, Ansible, and more (via Trivy, Semgrep, and KICS).
-- Supply chain: npm/Yarn, PyPI, Maven/Gradle, Go modules.
-- Secrets: any text file in the repository.
-
-**Do I need to install Trivy, Semgrep, or KICS?**
-Not by default — scans are routed to a hosted backend. Set `bobDevSecOps.security.scannersUseLocal: true` to run scanners locally, in which case they must be installed and available on your `PATH`.
-
-**Can I pause and resume a scan?**
-Yes. Press **Stop** during the attack-surface scan, then reopen the task from history and click **Resume scan**. Pauses expire after seven days.
-
-**Where are scan results stored?**
-Locally under `~/.bob/security-watch/findings/v1/`, organized by project and branch, retained for 90 days.
-
-**Does the scanner modify my source code?**
-No. Scan workflows are read-only. Only the Fix Supply Chain Vulnerabilities workflow modifies files, and only after your confirmation.
 
 ## Feedback and Support
 
